@@ -114,3 +114,8 @@ MNIST_Clustering/
 
 ## 📝 License
 This project is open-source and available under the MIT License.
+
+## Time Spent: 5 hours
+
+I spent some additional time refining the UI and updating the documentation to ensure better quality and clarity.
+
