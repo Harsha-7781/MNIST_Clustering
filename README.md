@@ -4,6 +4,20 @@ An interactive machine learning application that clusters MNIST handwritten digi
 
 ![Dashboard Overview](assets/dashboard.png)
 
+## 📖 About The Project
+
+This application provides a deep dive into **unsupervised machine learning** using the famous MNIST dataset (70,000 images of handwritten digits). It bridges the gap between raw data and interpretable insights by combining two powerful algorithms:
+
+1.  **t-SNE (t-Distributed Stochastic Neighbor Embedding)**:
+    -   A non-linear dimensionality reduction technique that is particularly good at visualizing high-dimensional datasets.
+    -   It converts similarities between data points in the high-dimensional space (784 pixels) to joint probabilities, effectively "unfolding" the manifold to 2D while preserving local structure.
+    
+2.  **K-Means Clustering**:
+    -   An iterative algorithm that partitions the dataset into $K$ distinct, non-overlapping subgroups (clusters).
+    -   Here, it blindly groups the digits based on their shape similarity, without knowing the true labels (0-9).
+
+The result is a stunning interactive map where you can see how the machine "perceives" the difference between a looped '8' and a straight '1', or where it gets confused between a messy '4' and a '9'.
+
 ## 📊 Visualizations
 
 ### 1. Interactive 2D Scatter Plot
@@ -12,6 +26,11 @@ The core of the application is a t-SNE projection of the 784-dimensional MNIST d
 -   **Interaction**: Click on any point to see the source image.
 
 ![t-SNE Scatter Plot](assets/scatterplot.png)
+
+### 2. Source Image Inspection
+Clicking any point in the cluster cloud immediately reveals the "ground truth" — the actual 28x28 pixel image of the digit. This helps verify if an outlier is a true anomaly or a misclassification.
+
+![Source Image View](assets/source_image.png)
 
 ### 2. Cluster Analysis & Distribution
 Analyze how well the model separated the digits.
