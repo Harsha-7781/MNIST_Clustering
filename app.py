@@ -73,7 +73,8 @@ st.info("👆 **Click on any point** to see the digit image in the sidebar!")
 fig = create_scatter_plot(tsne_2d, cluster_labels, true_labels=y)
 
 # Use on_select to enable interactivity
-event = st.plotly_chart(fig, use_container_width=True, on_select="rerun", selection_mode="points")
+# As of Streamlit 1.53, use_container_width is deprecated
+event = st.plotly_chart(fig, on_select="rerun", selection_mode="points")
 
 # Handle Selection
 if event and len(event.selection['points']) > 0:
